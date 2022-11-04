@@ -154,7 +154,8 @@ return [
     */
 
     'attributes' => [
-        'title' => 'タイトル'
+        'title' => 'タイトル',
+        'remarks' => '備考',
     ],
 
 ];

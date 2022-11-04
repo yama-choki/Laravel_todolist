@@ -25,9 +25,15 @@
                 <form action="/tasks" method="post" class="mt-10">
                   @csrf
 
-                  <input type="text" name="title">
-                  <textarea name="remarks" id=""></textarea>
-                  <button type="submit">追加する</button>
+                  <div class="container mx-auto md:flex md:justify-between ">
+                      <div class="flex-col md:w-2/3">
+                          <input type="text" name="title" value="{{ old('title') }}" placeholder="やること" class="w-full m-2 rounded-md focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
+                          <textarea name="remarks" id="" class="w-full m-2 rounded-md focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" placeholder="備考">{{ old('remarks') }}</textarea>
+                      </div>
+                      <div class="flex items-center md:w-1/3">
+                          <button type="submit" class="mx-auto bg-lime-500 rounded-md h-10 w-32 hover:bg-lime-400 transition-colors duration-500 text-white">追加する</button>
+                      </div>
+                  </div>
 
                 </form>
             </div>
@@ -35,7 +41,7 @@
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
             @if ($tasks->isNotEmpty())
-                <div class="max-w-7xl mx-auto mt-20">
+                <div class="max-w-7xl mx-auto mt-">
                     <div class="inline-block min-w-full py-2 align-middle">
                         <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                             <table class="min-w-full divide-y divide-gray-300">
@@ -56,7 +62,7 @@
                                                 <div>
                                                     {{ $item->title }}
                                                 </div>
-                                                <div>
+                                                <div class="whitespace-pre-line">
                                                     {{ $item->remarks }}
                                                 </div>
                                             </td>
@@ -69,6 +75,7 @@
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
                                                             @method('PUT')
+                                                            <input type="" name="status" value="{{$item->status}}">
                                                             <button type="submit"
                                                                 class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
                                                         </form>
@@ -78,7 +85,8 @@
                                                             class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
                                                     </div>
                                                     <div>
-                                                        <form action="/tasks/{{ $item->id }}" method="post"
+                                                        <form onsubmit="return deleteTask();"
+                                                            action="/tasks/{{ $item->id }}" method="post"
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
@@ -107,5 +115,13 @@
     </div>
     </footer>
 </body>
-
+<script>
+    function deleteTask() {
+        if (confirm('本当に削除しますか？')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+  </script>
 </html>
