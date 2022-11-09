@@ -29,11 +29,11 @@
                       <div class="flex flex-col items-center">
                           <label class="w-full max-w-3xl mx-auto">
                             <input
-                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                                type="text" name="title" value="{{ $task->title }}" />
+                                class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm mb-4"
+                                type="text" name="title" value="{{ $task->title }}" placeholder="やること"/>
                             <textarea
                                 class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                                name="remarks">{{ $task->remarks }}</textarea>
+                                name="remarks" placeholder="備考">{{ $task->remarks }}</textarea>
                           </label>
 
                           <x-auth-validation-errors class="mb-4" :errors="$errors" />
