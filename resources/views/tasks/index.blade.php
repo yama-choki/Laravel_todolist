@@ -31,7 +31,7 @@
                           <textarea name="remarks" id="" class="w-full m-2 rounded-md focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" placeholder="備考">{{ old('remarks') }}</textarea>
                       </div>
                       <div class="flex items-center md:w-1/3">
-                          <button type="submit" class="mx-auto bg-lime-500 rounded-md h-10 w-32 hover:bg-lime-400 transition-colors duration-500 text-white">追加する</button>
+                          <button type="submit" class="mx-auto bg-lime-500 h-10 w-32 hover:bg-lime-400 transition-colors duration-500 text-white">追加する</button>
                       </div>
                   </div>
 
@@ -77,7 +77,7 @@
                                                             @method('PUT')
                                                             <input type="hidden" name="status" value="{{$item->status}}">
                                                             <button type="submit"
-                                                                class="rounded-md bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">
+                                                                class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">
                                                                 完了
                                                             </button>
                                                         </form>
