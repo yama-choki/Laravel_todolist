@@ -31,7 +31,7 @@
                           <textarea name="remarks" id="" class="w-full m-2 rounded-md focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" placeholder="備考">{{ old('remarks') }}</textarea>
                       </div>
                       <div class="flex items-center md:w-1/3">
-                          <button type="submit" class="mx-auto bg-lime-500 h-10 w-32 hover:bg-lime-400 transition-colors duration-500 text-white">追加する</button>
+                          <button type="submit" class="rounded-md mx-auto bg-lime-500 h-10 w-32 hover:bg-lime-400 transition-colors duration-500 text-white">追加する</button>
                       </div>
                   </div>
 
