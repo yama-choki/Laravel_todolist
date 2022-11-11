@@ -49,7 +49,7 @@ class TaskController extends Controller
         $task->save();
 
         //リダイレクト
-        return redirect('/tasks');
+        return redirect('/laravel/laravel_todolist/public/tasks');
     }
 
     /**

@@ -11,12 +11,4 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    build: {
-        // outDir に manifest.json を出力
-        manifest: true,
-        rollupOptions: {
-           // デフォルトの .html エントリを上書き
-          input: '/path/to/main.js'
-        }
-    }
 });
