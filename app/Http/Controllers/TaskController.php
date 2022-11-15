@@ -47,9 +47,9 @@ class TaskController extends Controller
 
         //データベースに保存
         $task->save();
-
+        // dd(base_path());
         //リダイレクト
-        return redirect('/laravel/laravel_todolist/public/tasks');
+        return redirect('./tasks');
     }
 
     /**
