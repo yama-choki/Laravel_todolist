@@ -100,6 +100,7 @@ class TaskController extends Controller
 
             //モデル->カラム名 = 値 で、データを割り当てる
             $task->title = $request->input('title');
+            $task->remarks = $request->input('remarks');
 
             //データベースに保存
             $task->save();
