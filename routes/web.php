@@ -14,17 +14,17 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-// Route::resource('tasks', TaskController::class);
-Route::prefix('tasks')
-->controller(TaskController::class)
-->name('tasks.')
-->group(function(){
-    Route::get('/', 'index')->name('index');
-    Route::post('/', 'store')->name('store');
-    Route::get('/{id}/edit', 'edit')->name('edit');
-    Route::post('/{id}', 'update')->name('update');
-    Route::post('/{id}/destroy', 'destroy')->name('destroy');
-});
+Route::resource('tasks', TaskController::class);
+// Route::prefix('tasks')
+// ->controller(TaskController::class)
+// ->name('tasks.')
+// ->group(function(){
+//     Route::get('/', 'index')->name('index');
+//     Route::post('/', 'store')->name('store');
+//     Route::get('/{id}/edit', 'edit')->name('edit');
+//     Route::post('/{id}', 'update')->name('update');
+//     Route::post('/{id}/destroy', 'destroy')->name('destroy');
+// });
 
 Route::get('/', function () {
     return view('welcome');
