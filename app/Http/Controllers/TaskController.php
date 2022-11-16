@@ -99,7 +99,7 @@ class TaskController extends Controller
             $task = Task::find($id);
 
             //モデル->カラム名 = 値 で、データを割り当てる
-            $task->name = $request->input('task_name');
+            $task->title = $request->input('title');
 
             //データベースに保存
             $task->save();
