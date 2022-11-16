@@ -49,7 +49,7 @@ class TaskController extends Controller
         $task->save();
         // dd(base_path());
         //リダイレクト
-        return to_route('/tasks.index');
+        return to_route('tasks.index');
     }
 
     /**
