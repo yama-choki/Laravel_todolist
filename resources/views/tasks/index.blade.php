@@ -69,7 +69,7 @@
                                             <td class="p-0 text-right text-sm font-medium">
                                                 <div class="flex justify-end">
                                                     <div>
-                                                        <form action="{{ route('tasks.update, ['id' => $item->id]') }}"
+                                                        <form action="{{ route('tasks.update', ['id' => $item->id]) }}"
                                                             method="post"
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
