@@ -22,7 +22,7 @@
       <main class="grow grid place-items-center">
           <div class="w-full mx-auto px-4 sm:px-6">
               <div class="py-[100px]">
-                  <form action="{{ route('tasks.update', ['id' => $item->id]) }}" method="post" class="mt-10">
+                  <form action="{{ route('tasks.update', ['id' => $task->id]) }}" method="post" class="mt-10">
                       @csrf
                       @method('POST')
 
