@@ -49,7 +49,7 @@ class TaskController extends Controller
         $task->save();
         // dd(base_path());
         //リダイレクト
-        return redirect('./tasks');
+        return to_route('/tasks');
     }
 
     /**
@@ -117,7 +117,7 @@ class TaskController extends Controller
         }
 
           //リダイレクト
-          return redirect('/tasks');
+          return to_route('/tasks');
     }
 
     /**
@@ -130,6 +130,6 @@ class TaskController extends Controller
     {
         Task::find($id)->delete();
 
-        return redirect('/tasks');
+        return to_route('/tasks');
     }
 }

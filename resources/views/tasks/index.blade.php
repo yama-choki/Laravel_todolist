@@ -22,7 +22,7 @@
     <main class="grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="py-[20px]">
-                <form action="/tasks" method="post" class="mt-10">
+                <form action="" method="post" class="mt-10">
                   @csrf
 
                   <div class="container mx-auto md:flex md:justify-between ">
@@ -83,12 +83,13 @@
                                                         </form>
                                                     </div>
                                                     <div>
-                                                        <a href="/tasks/{{ $item->id }}/edit/"
-                                                            class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
+                                                        <a href="{{ route('tasks.edit',[ 'id' => $contact->id ]) }}"
+                                                            class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集
+                                                        </a>
                                                     </div>
                                                     <div>
                                                         <form onsubmit="return deleteTask();"
-                                                            action="/tasks/{{ $item->id }}" method="post"
+                                                            action="{{ route('tasks.destroy') }}" method="post"
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
