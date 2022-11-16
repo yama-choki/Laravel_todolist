@@ -83,13 +83,13 @@
                                                         </form>
                                                     </div>
                                                     <div>
-                                                        <a href="/tasks/{{ $item->id }}/edit"
+                                                        <a href="{{ route('tasks.edit',[ 'id' => $item->id ]) }}"
                                                             class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集
                                                         </a>
                                                     </div>
                                                     <div>
                                                         <form onsubmit="return deleteTask();"
-                                                            action="{{ route('tasks.destroy') }}" method="post"
+                                                            action="{{ route('tasks.destroy', [ 'id' => $item->id ]) }}" method="post"
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
