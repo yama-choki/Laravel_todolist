@@ -93,7 +93,6 @@
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
-                                                            @method('DELETE')
                                                             <button type="submit"
                                                                 class="py-4 w-20 md:hover:bg-slate-200 transition-colors">削除</button>
                                                         </form>
