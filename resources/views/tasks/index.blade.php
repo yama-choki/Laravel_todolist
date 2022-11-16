@@ -83,7 +83,7 @@
                                                         </form>
                                                     </div>
                                                     <div>
-                                                        <a href="{{ route('tasks.edit',[ 'id' => $contact->id ]) }}"
+                                                        <a href="{{ route('tasks.edit',[ 'id' => $tasks->id ]) }}"
                                                             class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集
                                                         </a>
                                                     </div>
