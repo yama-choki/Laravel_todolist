@@ -94,7 +94,8 @@
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
                                                             @method('POST')
-                                                            <a class="py-4 w-20 md:hover:bg-slate-200 transition-colors">削除</a>
+                                                            <button type="submit"
+                                                                class="py-4 w-20 md:hover:bg-slate-200 transition-colors">削除</button>
                                                         </form>
                                                     </div>
                                                 </div>
