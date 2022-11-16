@@ -74,7 +74,7 @@
                                                             class="inline-block text-gray-500 font-medium"
                                                             role="menuitem" tabindex="-1">
                                                             @csrf
-                                                            @method('PUT')
+                                                            @method('POST')
                                                             <input type="hidden" name="status" value="{{$item->status}}">
                                                             <button type="submit"
                                                                 class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">
